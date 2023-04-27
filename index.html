@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the HTML document -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Ensures proper rendering and touch zooming in Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the initial zoom level and width of the viewport -->
+
     <title>Status Certificate.ai</title>
+
+    <!-- Manifest file for PWA support -->
     <link rel="manifest" href="assets/site.webmanifest">
+
+    <!-- Apple touch icon for iOS devices -->
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+    <!-- Android Chrome icons -->
     <link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="assets/android-chrome-512x512.png">
+
+    <!-- Favicon icons for browsers -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
+    <!-- Shortcut icon for browsers -->
     <link rel="shortcut icon" href="assets/favicon.ico">
+
+    <!-- Theme color for browsers -->
     <meta name="theme-color" content="#ffffff">
 
+    <!-- Styles for the page -->
     <style>
         body {
-            padding: 3% 5% 5% 5%;
+            padding: 1% 5% 5% 5%;
             justify-content: center;
             align-items: center;
             height: 100%;
             background-color: white; /* set default background color */
         }
 
+        /* Apply a different background color for dark mode */
         @media (prefers-color-scheme: dark) {
             body {
                 background-color: #0A0F19; /* set background color for dark mode */
             }
         }
 
+        /* Apply different padding for mobile devices */
         @media (max-width: 768px) {
             body {
                 padding: 0;
@@ -37,13 +53,14 @@
     </style>
 </head>
 <body>
+    <!-- Include the Gradio JavaScript library -->
     <script
-	type="module"
-	src="https://gradio.s3-us-west-2.amazonaws.com/3.20.1/gradio.js"
-></script>
+        type="module"
+        src="https://gradio.s3-us-west-2.amazonaws.com/3.20.1/gradio.js"
+    ></script>
 
-<gradio-app src="https://arslvn-statuscertificate.hf.space" eager="true" container="true" info="false"></gradio-app>
+    <!-- Display the Gradio app -->
+    <gradio-app src="https://arslvn-statuscertificate.hf.space" eager="true" container="true" info="false"></gradio-app>
 
-    
 </body>
 </html>
